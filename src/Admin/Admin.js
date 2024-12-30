@@ -1,26 +1,15 @@
 import './Admin.css';
+import { useNavigate } from "react-router-dom";
 
-
-const Admin =()=>{
-return(
+const Admin = () => {
+    let name = localStorage.getItem("Name");
+    const nav = useNavigate();
+    return (
         <>
-        <header className="container">
-            <div>
-
-            </div>
-            <div>
-                <input type="text"></input>
-            </div>
-            <div>
-            <i class="bi bi-cart"></i>
-            </div>
-            <div></div>
-        </header>
-        <div>
-        <button>Add catagories</button>
-    </div>
-    </>
-)
+            <header className="container">Admin: {name}</header>
+            <button onClick={() => nav("/admin/addcatagories")}>Add catagories</button>
+        </>
+    )
 }
 
 export default Admin;
