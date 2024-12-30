@@ -11,9 +11,6 @@ const nav= useNavigate();
     const handleaction = () => {
         nav("/signup");
     };
-
-    
-
     
     return (
         <div className="container">
